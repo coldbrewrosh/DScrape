@@ -29,8 +29,8 @@ driver = webdriver.Chrome(options=chrome_options) #sometimes you have to insert 
 
 
 # Open the URL of the reviews section
-url = "https://www.daraz.com.np/products/shangrila-100-cotton-pack-of-4-t-shirt-for-men-black-blue-grey-white-fashion-t-shirt-for-men-i105140899-s1026788288.html?spm=a2a0e.searchlistcategory.sku.2.6d005d448mOhpp&search=1"
-# url = "https://www.daraz.com.np/products/mamaearth-ubtan-face-wash-100-ml-i100764018-s1021228047.html?spm=a2a0e.searchlist.list.7.30f064c6atZEG1&search=1"
+# url = "https://www.daraz.com.np/products/shangrila-100-cotton-pack-of-4-t-shirt-for-men-black-blue-grey-white-fashion-t-shirt-for-men-i105140899-s1026788288.html?spm=a2a0e.searchlistcategory.sku.2.6d005d448mOhpp&search=1"
+url = "https://www.daraz.com.np/products/mamaearth-ubtan-face-wash-100-ml-i100764018-s1021228047.html?spm=a2a0e.searchlist.list.7.30f064c6atZEG1&search=1"
 driver.get(url)
 
 # scroll_distance = 100  # Adjust the distance you want to scroll (in pixels)
@@ -61,7 +61,7 @@ driver.get(url)
 
 
 # Initialize a CSV file for writing
-csv_file = open(r'D:\System\Desktop\productdetails.csv', 'w', newline='', encoding='utf-8')
+csv_file = open(r'D:\System\Desktop\DScrape\Scraper\productdetails.csv', 'w', newline='', encoding='utf-8')
 csv_writer = csv.writer(csv_file)
 
 # Write the header row to the CSV file
