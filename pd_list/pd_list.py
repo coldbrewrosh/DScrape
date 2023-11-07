@@ -6,7 +6,7 @@ def transform_url(url):
     transformed_url = url.replace("www.daraz.com.np/", "https://www.daraz.com.np/")
 
     # Append the desired query parameters (e.g., ?ajax=true&page=102&sort=order)
-    transformed_url += "?ajax=true&page=iterator&sort=order"
+    transformed_url += "?ajax=true&page=1&sort=order"
 
     return transformed_url
 
@@ -20,7 +20,6 @@ with open(input_file, 'r') as input_csv, open(output_file, 'w', newline='') as o
     writer = csv.writer(output_csv)
 
     # Write the header row to the output CSV
-    writer.writerow(['Clothing Type', 'Transformed URL'])
 
     # Iterate through the rows of the input CSV
     for row in reader:
@@ -30,6 +29,6 @@ with open(input_file, 'r') as input_csv, open(output_file, 'w', newline='') as o
         transformed_url = transform_url(original_url)
 
         # Write the transformed data to the output CSV
-        writer.writerow([clothing_type, transformed_url])
+        writer.writerow([transformed_url])
 
 print(f"Transformation complete. The output has been saved to {output_file}")
