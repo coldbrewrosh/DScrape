@@ -1,5 +1,6 @@
 import requests
 import pandas as pd
+import time
 
 url = "https://www.daraz.com.np/mens-casual-tops"
 
@@ -29,7 +30,9 @@ for x in range(1,11):
     for p in data['mods']['listItems']:
         res.append(p)
     df = pd.json_normalize(res)
-    df.to_csv(f'pd_list_req/mens-casual-tops-page-{x}.csv', index=False)
+    df.to_csv(f'pd_list_req/csv/mens-casual-tops-page-{x}.csv', index=False)
+
+    time.sleep(10)
 
 # df = pd.json_normalize(res)
-df.to_csv('pd_list_req/mens-casual-tops-10-pages.csv', index=False)
+df.to_csv('pd_list_req/csv/mens-casual-tops-10-pages.csv', index=False)
